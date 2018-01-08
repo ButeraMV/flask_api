@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 
-data = fetch_movielens(min_rating=4.0)
+data = fetch_movielens(min_rating=3.5)
 
 model = LightFM(loss='warp')
 model.fit(data['train'], epochs=30, num_threads=2)
